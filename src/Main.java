@@ -1,15 +1,14 @@
-@FunctionalInterface
-interface MathOperation {
-    int operate(int a, int b);
-
-}
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        MathOperation add = (a, b) -> a + b;
-        MathOperation multiply = (a, b) -> a * b;
-        System.out.println(add.operate(5, 3));
-        System.out.println(multiply.operate(5, 3));
+        String[] names = {"소주련", "소", "주", "련"};
 
+        for (String n: names) {
+            System.out.println(n);
+        }
+
+        Arrays.stream(names).forEach(name -> System.out.println(name));
+        Arrays.stream(names).forEach(System.out::println);
     }
 }
